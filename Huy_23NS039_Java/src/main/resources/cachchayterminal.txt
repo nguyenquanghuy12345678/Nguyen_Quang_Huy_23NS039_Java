@@ -1,0 +1,75 @@
+Sử dụng nút dấu đỏ trên thanh để mở server , dừng chương trình _ ok
+
+
+
+
+
+
+
+
+
+Đúng, nếu bạn chạy LoginServer trước và sau đó chạy DangNhapDialog, thì LoginServer sẽ bắt đầu lắng nghe các kết nối từ client và không còn hoạt động trên giao diện dòng lệnh cho đến khi bạn kết thúc quá trình chạy của nó hoặc có một lỗi xảy ra.
+
+Vì vậy, để thực hiện cả hai công việc cùng một lúc, bạn cần mở hai cửa sổ cửa sổ dòng lệnh hoặc terminal riêng biệt. Trong mỗi cửa sổ, bạn chạy một class tương ứng.
+
+Ví dụ:
+
+Trong một cửa sổ dòng lệnh hoặc terminal, bạn chạy LoginServer:
+Copy code
+java khachsangpt.LoginServer
+Trong cửa sổ dòng lệnh hoặc terminal khác, bạn chạy DangNhapDialog:
+Copy code
+java khachsangpt.DangNhapDialog
+Khi bạn thực hiện như vậy, LoginServer sẽ tiếp tục lắng nghe kết nối từ client trong khi DangNhapDialog sẽ hiển thị cửa sổ đăng nhập, cho phép người dùng nhập thông tin và kết nối đến LoginServer để xác thực.
+
+
+
+
+
+Để chạy cả hai lớp `LoginServer` và `DangNhapDialog` một cách đồng thời, bạn có thể thực hiện các bước sau:
+
+### Bước 1: Mở Terminal hoặc Command Prompt
+
+Mở một terminal hoặc command prompt trên máy tính của bạn. Tùy thuộc vào hệ điều hành bạn đang sử dụng, việc này có thể thực hiện thông qua việc tìm kiếm "Terminal" hoặc "Command Prompt" trong danh sách ứng dụng của hệ điều hành.
+
+### Bước 2: Di chuyển đến Thư mục chứa mã nguồn Java
+
+Sử dụng lệnh `cd` để di chuyển đến thư mục chứa mã nguồn Java của bạn. Ví dụ, nếu mã nguồn của bạn nằm trong thư mục `project`, bạn có thể di chuyển đến thư mục này bằng cách nhập:
+
+```
+cd path/to/your/project
+```
+
+### Bước 3: Biên dịch các file .java
+
+Biên dịch các file `.java` thành các file `.class` sử dụng trình biên dịch Java (`javac`). Ví dụ:
+
+```
+javac khachsangpt/LoginServer.java
+javac khachsangpt/DangNhapDialog.java
+```
+
+### Bước 4: Chạy LoginServer
+
+Trong terminal hoặc command prompt đầu tiên, chạy lớp `LoginServer` bằng lệnh sau:
+
+```
+java khachsangpt.LoginServer
+```
+
+### Bước 5: Chạy DangNhapDialog
+
+Trong terminal hoặc command prompt thứ hai, chạy lớp `DangNhapDialog` bằng lệnh sau:
+
+```
+java khachsangpt.DangNhapDialog
+```
+
+### Bước 6: Sử dụng ứng dụng
+
+Sau khi thực hiện các bước trên, `LoginServer` sẽ bắt đầu lắng nghe kết nối từ client trên terminal/command prompt đầu tiên và `DangNhapDialog` sẽ hiển thị cửa sổ đăng nhập trên terminal/command prompt thứ hai. Bạn có thể nhập thông tin đăng nhập vào cửa sổ đăng nhập và sử dụng ứng dụng của bạn.
+
+
+Chạy Run As -> Application để mở 2 console
+
+Display Select Console -> Hình cái tivi 
